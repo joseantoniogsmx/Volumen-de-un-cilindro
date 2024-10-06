@@ -1,0 +1,29 @@
+name: C Compiler
+
+on:
+  push:
+    branches:
+      - main  # o la rama que estés utilizando
+
+jobs:
+  build:
+    runs-on: windows-latest  # O 'ubuntu-latest' si quieres un .out en lugar de .exe
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: Install MinGW
+      run: |
+        choco install mingw
+        refreshenv
+
+    - name: Compile C program
+      run: |
+        gcc Volumen de un cilindro. Código fuente.exe Volumen de un cilindro. Código fuente.c
+        
+    - name: Upload .exe
+      uses: actions/upload-artifact@v2
+      with:
+        name: Volumen de un cilindro
+        path: Volumen de un cilindro.exe
