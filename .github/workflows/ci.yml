@@ -22,7 +22,7 @@ jobs:
         gcc Volumen de un cilindro. Código fuente.exe Volumen de un cilindro. Código fuente.c
         
     - name: Upload .exe
-      uses: actions/upload-artifact@v2
+      uses: actions/upload-artifact@v3
       with:
         name: Volumen de un cilindro
         path: Volumen de un cilindro.exe
