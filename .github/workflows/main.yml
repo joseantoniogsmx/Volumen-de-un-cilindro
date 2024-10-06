@@ -1,0 +1,26 @@
+name: Compilación de C
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Verificar código
+      uses: actions/checkout@v2
+
+    - name: Instalar GCC
+      run: sudo apt-get install -y build-essential
+
+    - name: Compilar el programa
+      run: gcc -o volumen_cilindro "Volumen de un cilindro.c"
+
+    - name: Ejecutar el programa
+      run: ./volumen_cilindro
