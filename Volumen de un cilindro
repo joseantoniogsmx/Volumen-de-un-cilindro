@@ -1,0 +1,32 @@
+#include <stdio.h>
+#include <math.h>
+
+    /* PROGRAMA PARA CALCULAR EL VOLUMEN DE UN CILINDRO
+    UNIDAD 3 - ACTIVIDAD COMPLEMENTARIA 2
+    DISENO DE ALGORITMOS 1 */
+
+    #ifndef M_PI
+#define M_PI 3.1416
+#endif
+
+int main() {
+    printf("Programa para calcular el volumen de un cilindro");
+        // Variables
+    float radio, altura, volumen;
+
+    // Datos proporcionados por el usuario
+        printf("Ingrese el radio: ");
+    scanf("%f", &radio);
+
+    printf("Ingrese la altura: ");
+    scanf("%f", &altura);
+
+    // Cálculo del volumen del un cilindro
+    /* La fórmula es V=PIR2H */
+    volumen= M_PI * pow(radio, 2) * altura;
+
+    // Resultado
+    printf("El volumen es: %.2f\n", volumen);
+
+    return 0;
+    } 
