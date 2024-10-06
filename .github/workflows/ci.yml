@@ -17,7 +17,6 @@ jobs:
       run: |
         choco install mingw
         refreshenv
-
     - name: Compile C program
       run: |
         gcc Volumen de un cilindro. Código fuente.exe Volumen de un cilindro. Código fuente.c
@@ -27,3 +26,4 @@ jobs:
       with:
         name: Volumen de un cilindro
         path: Volumen de un cilindro.exe
+        
